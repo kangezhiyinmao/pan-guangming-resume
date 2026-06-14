@@ -21,7 +21,7 @@
 					<li><a href="#experience">经历</a></li>
 					<li><a href="#project">项目</a></li>
 					<li><a href="#skills">技能</a></li>
-					<li><a href="#contact">联系</a></li>
+					<li><a href="javascript:void(0)" onclick="openModal()" style="text-decoration:none">联系</a></li>
 				</ul>
 			</nav>
 
@@ -197,74 +197,12 @@
 						</div>
 					</div>
 					<footer>
-						<a href="#contact" class="button large scrolly">联系我</a>
+						<a href="javascript:void(0)" onclick="openModal()" class="button large scrolly" style="text-decoration:none">联系我</a>
 					</footer>
 				</div>
 			</article>
 <!-- Contact --><!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>联系方式</h2>
-						<p>欢迎通过以下方式与我取得联系</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>社交媒体</h3>
-							<ul class="social">
-								<li><a href="mailto:2286177208@qq.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-								<li><a href="tel:13247343501" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
-								<li><a href="#" class="icon brands fa-weixin"><span class="label">WeChat</span></a></li>
-								<li><a href="#" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>简历更新于 2026 年 6 月 | 潘光明 · 网络运维工程师</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Scripts -->
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -272,5 +210,36 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+	
+			<div style="text-align:center;padding:1.5rem;background:#f5f5f5;font-size:0.85rem;color:#888">
+				简历更新于 2026 年 6 月 | 潘光明 · 网络运维工程师
+			</div>
+
+<!-- Contact Modal -->
+<div id="contactModal" class="modal-overlay" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);align-items:center;justify-content:center">
+  <div style="background:#fff;padding:2rem;border-radius:8px;max-width:400px;width:90%;text-align:center;position:relative">
+    <button onclick="closeModal()" style="position:absolute;top:10px;right:15px;font-size:1.5rem;border:none;background:none;cursor:pointer">&times;</button>
+    <h3 style="margin-top:0;margin-bottom:1rem;color:#3e3e3e;font-family:'Open Sans',sans-serif">联系方式</h3>
+    <p style="font-size:1.1rem;line-height:2;color:#555;font-family:'Open Sans',sans-serif">
+      我的电话：13247343501<br>
+      我的微信：shixintoxuqiao
+    </p>
+    <button onclick="closeModal()" style="margin-top:1rem;padding:0.6rem 2rem;background:#43B3E0;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:1rem">关闭</button>
+  </div>
+</div>
+<script>
+function openModal() {
+  document.getElementById('contactModal').style.display = 'flex';
+}
+function closeModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+// Close on overlay click
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal-overlay')) {
+    closeModal();
+  }
+});
+</script>
+</body>
 </html>
