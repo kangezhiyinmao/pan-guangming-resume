@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>潘光明 - 网络运维工程师</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🌐</text></svg>">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -116,31 +116,43 @@
 <div class="col-lg-10">
 <p style="font-weight:600;font-size:1.05rem;text-align:center">500 人规模企业办公网标准化与无线准入升级项目</p>
 <p style="text-align:center;color:#888;font-size:0.85rem">2025.08 – 2026.04</p>
+
 <p style="font-weight:600;margin-top:1rem;color:#1a6b3c">项目背景与规模</p>
-<p style="font-size:0.93rem;color:#555">公司处于快速扩张期（约 500 人，终端设备 800+ 台）。原有网络架构单一，全网处于同一广播域，导致 ARP 欺骗、IP 冲突、网络环路频发。</p>
+<p style="font-size:0.93rem;color:#555">公司处于快速扩张期（约 500 人，终端设备 800+ 台）。原有网络架构单一，全网处于同一广播域，导致 ARP 欺骗、IP 冲突、网络环路频发。无线网络覆盖存在盲区，访客可随意接入内网，存在严重安全隐患与审计风险。</p>
+
 <p style="font-weight:600;margin-top:0.8rem;color:#1a6b3c">核心设备与技术栈</p>
-<p style="font-size:0.9rem;color:#555">核心/汇聚：华为 S5735 / S6730 | 接入与无线：华三 S5130、WX3500H AC、WA6300 AP | 准入：深信服 NAC、Windows Server(DHCP/DNS/AD) | 协议：VLAN、MSTP、VRRP、802.1X、RADIUS、DHCP Snooping、MAB</p>
+<p style="font-size:0.9rem;color:#555">核心/汇聚：华为 S5735 / S6730 系列交换机 | 接入与无线：华三 S5130 交换机、WX3500H 无线控制器(AC)、WA6300 系列 AP | 准入与核心服务：深信服 NAC 准入系统、Windows Server（DHCP/DNS/AD 域控）| 核心协议：VLAN、MSTP、VRRP、802.1X、RADIUS、DHCP Snooping、MAB</p>
+
 <p style="font-weight:500;margin-top:1rem;color:#1a6b3c">个人职责与技术实施</p>
+
 <p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">局域网重构与流量隔离</p>
 <ul style="font-size:0.9rem;color:#555">
-<li>针对 500 人规模进行子网划分，避免大广播域</li>
-<li>在汇聚交换机配置 VLANIF 接口作为网关，启用 dhcp select global</li>
+<li>针对 500 人规模进行子网划分，避免大广播域。在华三接入交换机上配置 VLAN 10（员工有线）、VLAN 20（员工无线）、VLAN 30（访客）、VLAN 40（哑终端/打印机/摄像头），并配置 port link-type access 端口绑定</li>
+<li>在华为汇聚交换机配置 VLANIF 接口作为网关，启用 dhcp select global 关联全局地址池</li>
 </ul>
+
+<p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">无线覆盖优化与无缝漫游</p>
+<ul style="font-size:0.9rem;color:#555">
+<li>协助网络工程师使用网规工具规划 52 个 AP 布点。在 H3C AC 上配置服务集（SSID），启用 11r 快速漫游协议，实现跨楼层移动办公"零丢包"</li>
+</ul>
+
 <p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">802.1X 准入控制与安全加固</p>
 <ul style="font-size:0.9rem;color:#555">
-<li>配置 dot1x enable，联动深信服 NAC 和 RADIUS</li>
-<li>针对无法认证的设备，配置 MAB 认证自动放行</li>
+<li>在交换机端口配置 dot1x enable，联动深信服 NAC 和 RADIUS 服务器，实现"员工域账号认证，访客微信/短信验证码"的差异化网络权限</li>
+<li>针对打印机等无法认证的设备，收集 MAC 地址并配置 mac-authentication（MAB 认证）自动放行</li>
 </ul>
+
 <p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">环路预防与 IP 防冲突</p>
 <ul style="font-size:0.9rem;color:#555">
-<li>开启 loopback-detection enable</li>
-<li>配置 dhcp snooping enable</li>
+<li>在接入层交换机全局开启 loopback-detection enable（环回测试），防止员工私接小路由器导致全网瘫痪</li>
+<li>配置 dhcp snooping enable 并在上行口配置 dhcp snooping trust，杜绝非法 DHCP 服务器分配错误 IP</li>
 </ul>
+
 <p style="font-weight:600;margin-top:0.8rem;color:#1a6b3c">项目成果</p>
 <ul style="font-size:0.9rem;color:#555">
-<li>网络故障率降低 42%</li>
-<li>IP 冲突解决</li>
-<li>弱信号优化</li>
+<li><strong>网络故障率降低 42%</strong>：环路故障清零（贡献 15% 降幅），检测到环路后 2 秒内自动丢弃端口流量并报警</li>
+<li><strong>IP 冲突及地址耗尽解决</strong>（贡献 15% 降幅）：VLAN 划分扩大地址池，DHCP Snooping 拦截私接路由器广播</li>
+<li><strong>弱信号踢除与漫游优化</strong>（贡献 12% 降幅）：配置 wlan min-rate 低速率用户强制下线策略，无线投诉基本清零</li>
 </ul>
 </div>
 </div>
