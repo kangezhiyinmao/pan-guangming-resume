@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>潘光明 - 网络运维工程师</title>
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-.hero{background:linear-gradient(135deg,#0f2027,#203a43 40%,#2c5364);color:#fff;padding:3.5rem 1.5rem 2.5rem;text-align:center}
-.hero h1{font-size:2.8rem;font-weight:700}
-.hero .subtitle{font-size:1.15rem;margin-top:.5rem;color:#a8d8ea}
-.hero .meta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem 2.5rem;font-size:.92rem;color:#b8ceda}
-.container{max-width:920px;margin:0 auto;padding:0 1rem}
-.section{background:#fff;border-radius:8px;margin:1.2rem 0;padding:1.8rem 2rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.section-title{font-size:1.2rem;font-weight:600;color:#203a43;padding-bottom:.6rem;margin-bottom:1.2rem;border-bottom:2px solid #e8edf0}
-.edu-item{display:flex;justify-content:space-between;flex-wrap:wrap}
-.edu-item .school{font-weight:600}
-.edu-item .meta{color:#666;font-size:.9rem}
-.edu-courses{margin-top:.5rem;color:#444;font-size:.93rem}
-.work-item{margin-bottom:1.4rem}
-.work-header{display:flex;justify-content:space-between;flex-wrap:wrap}
-.work-header .company{font-weight:600}
-.work-header .role{color:#2c5364;font-weight:500}
-.work-header .period{color:#888;font-size:.85rem}
-.work-duties{list-style:none;margin-top:.5rem}
-.work-duties li{padding-left:1.1rem;margin-bottom:.35rem;font-size:.93rem;position:relative}
-.work-duties li::before{content:"";position:absolute;left:0;top:.7rem;width:.4rem;height:.4rem;border-radius:50%;background:#2c5364}
-.project-title{font-weight:600;font-size:1.02rem}
-.project-sub{font-size:.9rem;color:#555}
-.project-section-title{font-weight:600;margin:.6rem 0 .2rem;font-size:.93rem;color:#203a43}
-.project-duties{list-style:none}
-.project-duties li{padding-left:1.1rem;margin-bottom:.25rem;font-size:.92rem;position:relative}
-.project-duties li::before{content:"";position:absolute;left:0;top:.65rem;width:.35rem;height:.35rem;border-radius:50%;background:#5a8a9c}
-.project-highlights{list-style:none}
-.project-highlights li{padding-left:1.1rem;margin-bottom:.2rem;font-size:.91rem;position:relative}
-.project-highlights li::before{content:"+";position:absolute;left:0;color:#2c5364;font-weight:700}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:.6rem}
-.skill-item{font-size:.93rem}
-.skill-item strong{color:#203a43}
-.eval-list{list-style:none}
-.eval-list li{padding-left:1.1rem;margin-bottom:.35rem;font-size:.93rem;position:relative}
-.eval-list li::before{content:"◆";position:absolute;left:0;font-size:.55rem;top:.3rem;color:#2c5364}
-.footer{text-align:center;padding:1.5rem;font-size:.82rem;color:#999}
-@media(max-width:640px){html{font-size:14px}.hero{padding:2.5rem 1rem 1.8rem}.section{padding:1.2rem 1rem}.skills-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<header class="hero">
-<h1>潘光明</h1>
-<p class="subtitle">网络运维工程师</p>
-<div class="meta-row">
-<span>23 岁</span><span>13247343501</span><span>2286177208@qq.com</span>
-<span>本科 · 网络工程</span>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>潘光明 - 网络运维工程师</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#education">教育背景</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#experience">工作经历</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#project">项目经历</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">工作技能</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#eval">自我评价</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">网络运维工程师</p>
+            </div>
+        </header>
+        <!-- Education Section-->
+<section class="page-section" id="education">
+<div class="container">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">教育背景</h2>
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
 </div>
-</header>
-<main class="container">
-<section class="section">
-<h2 class="section-title">▶ 教育背景</h2>
-<div class="edu-item"><span class="school">华南理工大学广州学院 · 网络工程专业</span><span class="meta">2020.09 - 2024.06 · 本科</span></div>
-<p class="edu-courses">主修课程：网络工程、计算机网络管理、Python 语言程序设计、数据结构、数据库系统、计算机网络安全、企业网络架构拓扑等。</p>
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+<p style="font-weight:600;font-size:1.1rem;margin-bottom:0.2rem">华南理工大学广州学院 · 网络工程专业</p>
+<p style="color:#888;font-size:0.9rem">2020.09 – 2024.06 · 本科</p>
+<p style="text-align:left;font-size:0.95rem;color:#555">主修课程：网络工程、计算机网络管理、Python 语言程序设计、数据结构、数据库系统、计算机网络安全、企业网络架构拓扑等。</p>
+</div>
+</div>
+</div>
 </section>
-<section class="section">
-<h2 class="section-title">▶ 工作经历</h2>
-<div class="work-item">
-<div class="work-header"><span class="company">云橙控股（深圳）有限公司</span><span class="role">运维工程师</span><span class="period">2025.06 - 2026.06</span></div>
-<ul class="work-duties">
+<!-- Experience Section-->
+<section class="page-section bg-primary text-white" id="experience">
+<div class="container">
+<h2 class="page-section-heading text-center text-uppercase text-white">工作经历</h2>
+<div class="divider-custom divider-light">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<div style="margin-bottom:1.5rem;text-align:left">
+<p style="margin-bottom:0.3rem"><strong style="font-size:1.15rem;color:#fff">云橙控股（深圳）有限公司</strong> <span style="color:#1a6b3c;font-weight:500">运维工程师</span> <span style="color:rgba(255,255,255,0.6);font-size:0.85rem">2025.06 – 2026.06</span></p>
+<ul style="font-size:0.95rem;opacity:0.9">
 <li>熟悉网络设备（交换机、企业路由器、防火墙），快速识别处理桌面终端复杂问题</li>
 <li>为客户（南方电网）提供桌面运维服务，保障 500+ 终端日常软硬件稳定运行</li>
 <li>负责办公室日常网络巡检与设备维护，保障核心会议室视频系统稳定</li>
@@ -71,70 +92,140 @@
 <li>建立健全 IT 资产台账，定期执行软硬件资产盘点与合规性检查</li>
 </ul>
 </div>
-<div class="work-item">
-<div class="work-header"><span class="company">广东威视城市运营管理有限公司</span><span class="role">售后工程师</span><span class="period">2024.08 - 2025.06</span></div>
-<ul class="work-duties">
-<li>运用基础 Linux 指令，掌握各类网络协议，了解硬件设备，为海康威视旗下产品提供技术支持</li>
-<li>维护客户关系（市政府机关单位、国企、私企），提供现场及远程技术支持</li>
+<div style="text-align:left">
+<p style="margin-bottom:0.3rem"><strong style="font-size:1.15rem;color:#fff">广东威视城市运营管理有限公司</strong> <span style="color:#1a6b3c;font-weight:500">售后工程师</span> <span style="color:rgba(255,255,255,0.6);font-size:0.85rem">2024.08 – 2025.06</span></p>
+<ul style="font-size:0.95rem;opacity:0.9">
+<li>运用基础 Linux 指令，掌握各类网络协议，为海康威视旗下产品提供技术支持</li>
+<li>维护客户关系（市政府、国企、私企），提供现场及远程技术支持</li>
 <li>解答客户技术咨询，对问题进行深度分析与反馈</li>
 </ul>
 </div>
-</section>
-<section class="section">
-<h2 class="section-title">▶ 项目经历</h2>
-<p class="project-title">500 人规模企业办公网标准化与无线准入升级项目</p>
-<p class="project-sub" style="color:#888;font-size:.85rem">2025.08 - 2026.04</p>
-<p class="project-section-title">项目背景与规模</p>
-<p class="project-sub">公司处于快速扩张期（约 500 人，终端设备 800+ 台）。原有网络架构单一，全网处于同一广播域，导致 ARP 欺骗、IP 冲突、网络环路频发。</p>
-<p class="project-section-title">核心设备与技术栈</p>
-<p class="project-sub">核心/汇聚：华为 S5735 / S6730 | 接入与无线：华三 S5130、WX3500H AC、WA6300 AP | 准入：深信服 NAC、Windows Server(DHCP/DNS/AD) | 协议：VLAN、MSTP、VRRP、802.1X、RADIUS、DHCP Snooping、MAB</p>
-<p class="project-section-title">个人职责与技术实施</p>
-<p style="font-weight:500;color:#203a43;margin:.5rem 0 .15rem;font-size:.93rem">局域网重构与流量隔离</p>
-<ul class="project-duties">
-<li>针对 500 人规模进行子网划分，避免大广播域。配置 VLAN 10（员工有线）、VLAN 20（员工无线）、VLAN 30（访客）、VLAN 40（哑终端）</li>
-<li>在汇聚交换机配置 VLANIF 接口作为网关，启用 dhcp select global</li>
-</ul>
-<p style="font-weight:500;color:#203a43;margin:.5rem 0 .15rem;font-size:.93rem">无线覆盖优化与无缝漫游</p>
-<ul class="project-duties">
-<li>协助规划 52 个 AP 布点，在 H3C AC 上配置 SSID，启用 11r 快速漫游协议</li>
-</ul>
-<p style="font-weight:500;color:#203a43;margin:.5rem 0 .15rem;font-size:.93rem">802.1X 准入控制与安全加固</p>
-<ul class="project-duties">
-<li>配置 dot1x enable，联动深信服 NAC 和 RADIUS 服务器，实现差异化网络权限</li>
-<li>针对无法认证的设备，配置 MAB 认证自动放行</li>
-</ul>
-<p style="font-weight:500;color:#203a43;margin:.5rem 0 .15rem;font-size:.93rem">环路预防与 IP 防冲突</p>
-<ul class="project-duties">
-<li>开启 loopback-detection enable，防止私接路由器导致全网瘫痪</li>
-<li>配置 dhcp snooping enable，上行口配置 dhcp snooping trust</li>
-</ul>
-<p class="project-section-title">项目成果</p>
-<ul class="project-highlights">
-<li>网络故障率降低 42%：环路故障清零（贡献 15%）</li>
-<li>IP 冲突及地址耗尽解决（贡献 15%）</li>
-<li>弱信号踢除与漫游优化（贡献 12%）</li>
-</ul>
-</section>
-<section class="section">
-<h2 class="section-title">▶ 工作技能</h2>
-<div class="skills-grid">
-<div class="skill-item"><strong>网络基础架构</strong> – TCP/IP协议，局域网搭建，路由器/交换机/AP配置与排错</div>
-<div class="skill-item"><strong>软件与服务</strong> – Office 365/WPS；AD域管理、文件共享、VPN、企业防病毒</div>
-<div class="skill-item"><strong>Python/PowerShell</strong> – 自动化脚本编写</div>
-<div class="skill-item"><strong>沟通能力</strong> – 结构化问题分析，擅长拆解复杂问题</div>
-<div class="skill-item"><strong>团队协作</strong> – 跨部门高效沟通，协同完成项目目标</div>
+</div>
 </div>
 </section>
-<section class="section">
-<h2 class="section-title">▶ 自我评价</h2>
-<ul class="eval-list">
+<!-- Project Section-->
+<section class="page-section" id="project">
+<div class="container">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">项目经历</h2>
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<p style="font-weight:600;font-size:1.05rem;text-align:center">500 人规模企业办公网标准化与无线准入升级项目</p>
+<p style="text-align:center;color:#888;font-size:0.85rem">2025.08 – 2026.04</p>
+<p style="font-weight:600;margin-top:1rem;color:#1a6b3c">项目背景与规模</p>
+<p style="font-size:0.93rem;color:#555">公司处于快速扩张期（约 500 人，终端设备 800+ 台）。原有网络架构单一，全网处于同一广播域，导致 ARP 欺骗、IP 冲突、网络环路频发。</p>
+<p style="font-weight:600;margin-top:0.8rem;color:#1a6b3c">核心设备与技术栈</p>
+<p style="font-size:0.9rem;color:#555">核心/汇聚：华为 S5735 / S6730 | 接入与无线：华三 S5130、WX3500H AC、WA6300 AP | 准入：深信服 NAC、Windows Server(DHCP/DNS/AD) | 协议：VLAN、MSTP、VRRP、802.1X、RADIUS、DHCP Snooping、MAB</p>
+<p style="font-weight:500;margin-top:1rem;color:#1a6b3c">个人职责与技术实施</p>
+<p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">局域网重构与流量隔离</p>
+<ul style="font-size:0.9rem;color:#555">
+<li>针对 500 人规模进行子网划分，避免大广播域</li>
+<li>在汇聚交换机配置 VLANIF 接口作为网关，启用 dhcp select global</li>
+</ul>
+<p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">802.1X 准入控制与安全加固</p>
+<ul style="font-size:0.9rem;color:#555">
+<li>配置 dot1x enable，联动深信服 NAC 和 RADIUS</li>
+<li>针对无法认证的设备，配置 MAB 认证自动放行</li>
+</ul>
+<p style="font-weight:500;color:#1a6b3c;margin:0.5rem 0 0.15rem;font-size:0.93rem">环路预防与 IP 防冲突</p>
+<ul style="font-size:0.9rem;color:#555">
+<li>开启 loopback-detection enable</li>
+<li>配置 dhcp snooping enable</li>
+</ul>
+<p style="font-weight:600;margin-top:0.8rem;color:#1a6b3c">项目成果</p>
+<ul style="font-size:0.9rem;color:#555">
+<li>网络故障率降低 42%</li>
+<li>IP 冲突解决</li>
+<li>弱信号优化</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section bg-primary text-white" id="skills">
+<div class="container">
+<h2 class="page-section-heading text-center text-uppercase text-white">工作技能</h2>
+<div class="divider-custom divider-light">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<div class="row">
+<div class="col-md-6 mb-3"><strong style="color:#fff">网络基础架构</strong><br><span style="font-size:0.9rem;opacity:0.85">TCP/IP协议，局域网搭建，路由器/交换机/AP配置与排错</span></div>
+<div class="col-md-6 mb-3"><strong style="color:#fff">软件与服务</strong><br><span style="font-size:0.9rem;opacity:0.85">Office 365/WPS；AD域管理、VPN、防病毒</span></div>
+<div class="col-md-6 mb-3"><strong style="color:#fff">Python/PowerShell</strong><br><span style="font-size:0.9rem;opacity:0.85">自动化脚本编写</span></div>
+<div class="col-md-6 mb-3"><strong style="color:#fff">沟通能力</strong><br><span style="font-size:0.9rem;opacity:0.85">结构化问题分析</span></div>
+<div class="col-md-6 mb-3"><strong style="color:#fff">团队协作</strong><br><span style="font-size:0.9rem;opacity:0.85">跨部门高效沟通</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section" id="eval">
+<div class="container">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">自我评价</h2>
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<ul style="font-size:1.05rem;color:#555;line-height:2">
 <li>具备强烈的服务意识与责任心；逻辑清晰，抗压能力强</li>
 <li>具备良好的跨部门沟通能力与团队协作精神</li>
-<li>面对高强度工作与突发情况，能够保持情绪稳定并持续输出有效工作结果</li>
+<li>面对高强度工作与突发情况，能处理并继续输出效果</li>
 <li>具备良好的沟通协调能力与持续学习能力</li>
 </ul>
+</div>
+</div>
+</div>
 </section>
-</main>
-<footer class="footer">简历更新于 2026 年 6 月 | 潘光明 · 网络运维工程师</footer>
+
+<footer class="footer text-center">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 class="text-uppercase mb-4">联系方式</h4>
+<p class="lead mb-0" style="font-size:0.95rem">13247343501<br>2286177208@qq.com</p>
+</div>
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 class="text-uppercase mb-4">社交</h4>
+<a class="btn btn-outline-light btn-social mx-1" href="mailto:2286177208@qq.com"><i class="fas fa-envelope"></i></a>
+<a class="btn btn-outline-light btn-social mx-1" href="tel:13247343501"><i class="fas fa-phone"></i></a>
+<a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-weixin"></i></a>
+<a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-qq"></i></a>
+</div>
+<div class="col-lg-4">
+<h4 class="text-uppercase mb-4">关于本站</h4>
+<p class="lead mb-0" style="font-size:0.9rem">基于 Start Bootstrap Freelancer 模板<br>使用 Bootstrap 5 + Font Awesome</p>
+</div>
+</div>
+</div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+<div class="container"><small>简历更新于 2026 年 6 月 | 潘光明 · 网络运维工程师</small></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function() {
+  window.addEventListener("scroll", function() {
+    var nav = document.getElementById("mainNav");
+    if (nav) {
+      if (window.scrollY > 100) { nav.classList.add("navbar-shrink"); }
+      else { nav.classList.remove("navbar-shrink"); }
+    }
+  });
+})();
+</script>
 </body>
 </html>
